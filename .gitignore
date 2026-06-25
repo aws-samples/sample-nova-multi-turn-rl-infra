@@ -1,0 +1,10 @@
+.venv/
+cdk.out/
+__pycache__/
+*.pyc
+*.pyo
+custom-environments/*.tar.gz
+.DS_Store
+cdk.context.json.ash/ash_output/
+.ash/ash_output/
+.ash/

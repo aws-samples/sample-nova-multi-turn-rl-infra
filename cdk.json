@@ -1,0 +1,46 @@
+{
+  "app": "python3 app.py",
+  "watch": {
+    "include": ["**"],
+    "exclude": [
+      "README.md",
+      "cdk*.json",
+      "requirements*.txt",
+      "source.bat",
+      "**/__pycache__",
+      "**/*.pyc",
+      "cdk.out",
+      ".venv"
+    ]
+  },
+  "context": {
+    "stack_name": "NovaMultiTurnRlStack",
+    "region": "us-east-1",
+    "sdk_resource_prefix": "",
+    "instance_type": "ml.p5.48xlarge",
+    "instance_count": 10,
+    "nova_model": "NOVA_LITE_2",
+    "vpc_cidr": "10.0.0.0/16",
+    "project_tag": "",
+    "environment_tag": "development",
+    "retain_bucket": "true",
+    "vf_env_id": "wordle",
+    "reward_cpu": "2048",
+    "reward_memory": "4096",
+    "use_custom_env": "false",
+    "custom_env_id": "my-custom-env",
+    "eks_kubernetes_version": "1.32",
+    "eks_admin_role_arn": "",
+    "target_cluster_name": "",
+    "target_eks_cluster_name": "",
+    "target_instance_type": "ml.p5.48xlarge",
+    "target_instance_count": "2",
+    "training_method": "RFT_MULTITURN_FULL",
+    "max_steps": 10,
+    "generation_replicas": 4,
+    "global_batch_size": 64,
+    "max_new_tokens": 4096,
+    "max_length": 16384,
+    "training_timeout": 1800
+  }
+}
