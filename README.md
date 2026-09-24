@@ -71,6 +71,7 @@ Metadata-based JSONL, one record per line; `data_s3_path` must be a `.jsonl` fil
 ### Custom reward environments
 
 1. Create `custom-environments/<env-id>/` with a `load_environment()` function (see `my-custom-env`).
+   `verifiers` is provided by the Nova Forge starter kit, so it does not need to be listed in the environment's dependencies.
 2. Set `use_custom_env: "true"` and `custom_env_id: "<env-id>"` in `cdk.json`.
 3. `cdk deploy` packages and uploads the environment to S3.
 
